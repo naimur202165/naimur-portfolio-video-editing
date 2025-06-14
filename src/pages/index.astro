@@ -26,6 +26,24 @@ const youtubeVideos = [
     url: "https://www.youtube.com/watch?v=BROVXUx1-lI",
   },
 ];
+// const youtubeVideos = [
+//   {
+//     title: "২০২৫ সালের নতুন পাঠ্যবইয়ে যা যা থাকছে | ব্যাপক পরিবর্তন আসছে সকল শ্রেণির নতুন বইয়ে",
+//     url: "https://www.youtube.com/watch?v=cftXsjqSvk4"
+//   },
+//   {
+//     title: "Jawan Trailer Reaction - LetsFame App",
+//     url: "https://www.youtube.com/watch?v=tPeaVYRsU_I"
+//   },
+//   {
+//     title: "Tom Collins - Short Film Teaser",
+//     url: "https://www.youtube.com/watch?v=v7GFrJc_Fv4"
+//   },
+//   {
+//     title: "7D - Feature Film Promotion Video",
+//     url: "https://youtu.be/L2Bk6l8ISjM"
+//   }
+// ];
 
 const reels = [
   {
@@ -34,7 +52,7 @@ const reels = [
     thumbnail: "/assets/naimur-digital-marketing-reels.png",
   },
   {
-    title: "চ্যাট জিপিটি দিয়ে কি কি করা যায়",
+    title: "চ্যাট জিপিটি দিয়ে কি কি করা যায়",
     url: "https://www.youtube.com/shorts/Omn40pF-nQg",
     thumbnail: "/assets/stock-4.jpg",
   },
@@ -87,59 +105,9 @@ const reels = [
 </BaseLayout>
 
 <style>
-  /* Basic reset and global styles (adjust as needed for your project) */
-  body {
-    margin: 0;
-    font-family: sans-serif; /* Example font */
-    line-height: 1.6;
-  }
-
-  /* Assuming 'wrapper' is for limiting content width and centering */
-  .wrapper {
-    width: 100%;
-    max-width: 1200px; /* Example max-width */
-    margin: 0 auto;
-    padding: 0 1rem; /* Add some padding on the sides */
-  }
-
-  /* Assuming 'stack' is for vertical spacing */
-  .stack > * + * {
-    margin-top: 1rem; /* Default spacing between stacked elements */
-  }
-
-  /* Responsive adjustments for 'stack' */
-  .stack.gap-8 > * + * {
-    margin-top: 2rem; /* Increased spacing */
-  }
-
-  .stack.gap-20 > * + * {
-    margin-top: 5rem; /* Even more spacing */
-  }
-
-  @media (min-width: 50em) {
-    .stack.gap-20 > * + * {
-      margin-top: 12rem; /* Largest spacing on larger screens */
-    }
-    .stack.gap-8 > * + * {
-      margin-top: 2rem; /* Increased spacing */
-    }
-  }
-
-  /* Mobile-first styles */
   .section {
     display: grid;
     gap: 2rem;
-    grid-template-columns: 1fr; /* Stack elements on mobile */
-    grid-template-areas:
-      "header"
-      "gallery";
-  }
-
-  .section.with-cta {
-    grid-template-areas:
-      "header"
-      "gallery"
-      "cta"; /* Stack CTA below gallery */
   }
 
   .with-background {
@@ -182,15 +150,6 @@ const reels = [
     font-size: var(--text-2xl);
   }
 
-  .gallery {
-    grid-area: gallery;
-  }
-
-  .cta {
-    grid-area: cta;
-  }
-
-  /* Desktop Styles */
   @media (min-width: 50em) {
     .section {
       grid-template-columns: repeat(4, 1fr);
@@ -215,5 +174,54 @@ const reels = [
       justify-self: flex-start;
       text-align: left;
     }
+
+    .gallery {
+      grid-area: gallery;
+    }
+
+    .cta {
+      grid-area: cta;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .gallery {
+      flex-direction: column;
+      align-items: center;
+    }
+    .gallery-card {
+      max-width: 100%;
+    }
+  }
+
+  .responsive-video {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+  }
+
+  .responsive-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .gallery-card {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    flex: 1 1 300px;
   }
 </style>
