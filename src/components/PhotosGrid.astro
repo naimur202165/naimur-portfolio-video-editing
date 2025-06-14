@@ -1,0 +1,84 @@
+---
+const photos = [
+  {
+    title: "Mountain Lake",
+    src: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    title: "Forest Path",
+    src: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    title: "Desert Dunes",
+    src: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    title: "City Skyline",
+    src: "https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    title: "Ocean View",
+    src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80",
+  },
+];
+---
+
+<div class="photos-grid">
+  {
+    photos.map((photo) => (
+      <div class="photo-card">
+        <img src={photo.src} alt={photo.title} loading="lazy" />
+        <div class="photo-title">{photo.title}</div>
+      </div>
+    ))
+  }
+</div>
+
+<style>
+  .photos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem auto;
+    max-width: 900px;
+    width: 100%;
+  }
+  .photo-card {
+    background: #181a20;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 2px 12px #0002;
+    border: 1px solid #23242a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .photo-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    background: #222;
+  }
+  .photo-title {
+    padding: 1rem;
+    font-size: 1.1rem;
+    color: #fff;
+    text-align: center;
+  }
+  @media (max-width: 600px) {
+    .photos-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      max-width: 100%;
+      margin: 1rem 0;
+      padding: 0 0.5rem;
+    }
+    .photo-card img {
+      height: 140px;
+    }
+    .photo-title {
+      font-size: 1rem;
+      padding: 0.7rem;
+    }
+  }
+</style>

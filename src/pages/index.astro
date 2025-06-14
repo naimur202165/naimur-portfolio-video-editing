@@ -67,6 +67,41 @@ const reels = [
     thumbnail: "/assets/naimur-digital-marketing-reels.png",
   },
 ];
+
+const photos = [
+  {
+    title: "Abstract Design",
+    src: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    title: "Geometric Pattern",
+    src: "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    title: "Colorful Abstract",
+    src: "https://images.unsplash.com/photo-1541701496583-0a2ca979d3e5?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    title: "Workspace Setup",
+    src: "https://images.unsplash.com/photo-1542744165-617ebf9ebd90?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    title: "Laptop and Coffee",
+    src: "https://images.unsplash.com/photo-1498050108023-c52496aca28b?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    title: "Abstract Shapes",
+    src: "https://images.unsplash.com/photo-1516321318423-f06f85e4a056?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    title: "Minimal Design",
+    src: "https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f?auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    title: "Creative Desk",
+    src: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=600&q=80",
+  },
+];
 ---
 
 <BaseLayout>
@@ -94,6 +129,29 @@ const reels = [
         <div class="cta">
           <CallToAction href="/work/">
             View All
+            <Icon icon="arrow-right" size="1.2em" />
+          </CallToAction>
+        </div>
+      </section>
+
+      <section class="section with-background with-cta">
+        <header class="section-header stack gap-2 lg:gap-4">
+          <h3>Graphic</h3>
+          <p>Some of my favorite graphics and photos.</p>
+        </header>
+        <div class="photos-grid">
+          {
+            photos.map((photo) => (
+              <div class="photo-card">
+                <img src={photo.src} alt={photo.title} loading="lazy" />
+                <div class="photo-title">{photo.title}</div>
+              </div>
+            ))
+          }
+        </div>
+        <div class="cta">
+          <CallToAction href="/graphics/">
+            View All Graphics
             <Icon icon="arrow-right" size="1.2em" />
           </CallToAction>
         </div>
@@ -207,6 +265,58 @@ const reels = [
     .gallery > * {
       max-width: 100%;
       min-width: 0;
+    }
+  }
+
+  .photos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+    width: 100%;
+    max-width: 1200px;
+    justify-items: center;
+  }
+
+  .photo-card {
+    background: #181a20;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 2px 12px #0002;
+    border: 1px solid #23242a;
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s;
+  }
+  .photo-card:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 4px 24px #0004;
+  }
+  .photo-card img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    background: #222;
+    display: block;
+  }
+  .photo-title {
+    padding: 1rem;
+    font-size: 1.1rem;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    background: transparent;
+  }
+  @media (max-width: 700px) {
+    .photos-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    .photo-card {
+      max-width: 100%;
     }
   }
 </style>
