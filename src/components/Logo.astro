@@ -1,0 +1,54 @@
+---
+import Icon from './Icon.astro';
+---
+
+<div class="logo">
+  <img src="/logo-test.svg" alt="Site Logo" width="80" height="80" />
+</div>
+
+<style>
+.logo {
+  font-family: var(--font-brand);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent-regular);
+  background: none; /* Remove background */
+  -webkit-background-clip: unset; /* Unset background-clip */
+  -webkit-text-fill-color: unset; /* Unset text-fill-color */
+  background-clip: unset; /* Unset background-clip */
+  line-height: 1;
+  width: 2.5em;
+  height: 2.5em;
+  transition: transform 0.2s ease;
+  border: none; /* Remove border if there is any */
+  box-shadow: none; /* Remove box shadow if there is any */
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+
+  .logo:hover {
+    transform: scale(1.1);
+    border-color: var(--accent-dark);
+  }
+
+  :global(.logo svg) {
+    width: 100%;
+    height: 100%;
+    stroke: var(--accent-regular);
+    fill: none;
+    stroke-width: 16;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  :global(.logo:hover svg) {
+    stroke: var(--accent-dark);
+  }
+</style>

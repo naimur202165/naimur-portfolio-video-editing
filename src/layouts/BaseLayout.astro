@@ -1,0 +1,45 @@
+---
+import MainHead from '../components/MainHead.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import OrbLayout from './OrbLayout.astro';
+import CustomCursor from '../components/CustomCursor.astro';
+import LoadingScreen from '../components/loading/LoadingScreen.astro';
+
+interface Props {
+	title?: string | undefined;
+	description?: string | undefined;
+}
+
+const { title, description } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<MainHead title={title} description={description} />
+	</head>
+	<body>
+		<LoadingScreen />
+		<CustomCursor />
+		<OrbLayout>
+			<Nav />
+			<main class="content">
+				<slot />
+			</main>
+			<Footer />
+		</OrbLayout>
+
+		<script>
+			addEventListener('load', () => document.documentElement.classList.add('loaded'));
+			import { initLoading } from '../utils/loading';
+			initLoading();
+		</script>
+
+		<style>
+			.content {
+				overflow-x: hidden;
+				width: 100%;
+			}
+		</style>
+	</body>
+</html>
