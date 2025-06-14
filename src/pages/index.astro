@@ -1,184 +1,219 @@
 ---
-import CallToAction from '../components/CallToAction.astro';
-import CompactSkills from '../components/CompactSkills.astro';
-import ContactCTA from '../components/ContactCTA.astro';
-import Hero from '../components/Hero.astro';
-import Icon from '../components/Icon.astro';
-import Reels from '../components/Reels.astro';
-import YouTubeVideos from '../components/YouTubeVideos.astro';
-import BaseLayout from '../layouts/BaseLayout.astro';
+import CallToAction from "../components/CallToAction.astro";
+import CompactSkills from "../components/CompactSkills.astro";
+import ContactCTA from "../components/ContactCTA.astro";
+import Hero from "../components/Hero.astro";
+import Icon from "../components/Icon.astro";
+import Reels from "../components/Reels.astro";
+import YouTubeVideos from "../components/YouTubeVideos.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 
 const youtubeVideos = [
   {
     title: "২০২৫ সালের নতুন পাঠ্যবইয়ে যা যা থাকছে ",
-    url: "https://www.youtube.com/watch?v=o4mfDrTMtdY&t=124s"
+    url: "https://www.youtube.com/watch?v=o4mfDrTMtdY&t=124s",
   },
   {
     title: "অষ্টম শ্রেণির নতুন বই ২০২৫ ",
-    url: "https://www.youtube.com/watch?v=W_thAdulS70"
+    url: "https://www.youtube.com/watch?v=W_thAdulS70",
   },
   {
     title: "৮ম শ্রেণির ষান্মাসিক মূল্যায়ন ইংরেজি প্রশ্ন উত্তর",
-    url: "https://www.youtube.com/watch?v=QzXmFsx7NcM"
+    url: "https://www.youtube.com/watch?v=QzXmFsx7NcM",
   },
   {
     title: "৯ম শ্রেণির অর্ধ বার্ষিক পরীক্ষার প্রশ্ন ২০২৪ ইংরেজি",
-    url: "https://www.youtube.com/watch?v=BROVXUx1-lI"
-  }
+    url: "https://www.youtube.com/watch?v=BROVXUx1-lI",
+  },
 ];
-// const youtubeVideos = [
-//   {
-//     title: "২০২৫ সালের নতুন পাঠ্যবইয়ে যা যা থাকছে | ব্যাপক পরিবর্তন আসছে সকল শ্রেণির নতুন বইয়ে",
-//     url: "https://www.youtube.com/watch?v=cftXsjqSvk4"
-//   },
-//   {
-//     title: "Jawan Trailer Reaction - LetsFame App",
-//     url: "https://www.youtube.com/watch?v=tPeaVYRsU_I"
-//   },
-//   {
-//     title: "Tom Collins - Short Film Teaser",
-//     url: "https://www.youtube.com/watch?v=v7GFrJc_Fv4"
-//   },
-//   {
-//     title: "7D - Feature Film Promotion Video",
-//     url: "https://youtu.be/L2Bk6l8ISjM"
-//   }
-// ];
 
 const reels = [
   {
     title: "Benefits of Digital Marketing",
     url: "https://www.youtube.com/shorts/LiTSZEULLcA",
-    thumbnail: "/assets/naimur-digital-marketing-reels.png"
+    thumbnail: "/assets/naimur-digital-marketing-reels.png",
   },
   {
-    title: "চ্যাট জিপিটি দিয়ে কি কি করা যায়",
+    title: "চ্যাট জিপিটি দিয়ে কি কি করা যায়",
     url: "https://www.youtube.com/shorts/Omn40pF-nQg",
-    thumbnail: "/assets/stock-4.jpg"
+    thumbnail: "/assets/stock-4.jpg",
   },
   {
     title: "গভীর ঘুম",
     url: "https://www.youtube.com/shorts/ENAPLwB8pK0",
-    thumbnail: "/assets/stock-3.jpg"
+    thumbnail: "/assets/stock-3.jpg",
   },
   {
     title: "Benefits of Digital Marketing",
     url: "https://www.youtube.com/shorts/LiTSZEULLcA",
-    thumbnail: "/assets/naimur-digital-marketing-reels.png"
+    thumbnail: "/assets/naimur-digital-marketing-reels.png",
   },
-
 ];
 ---
 
 <BaseLayout>
-	<div class="stack gap-20 lg:gap-48">
-		<div class="wrapper stack gap-8 lg:gap-20">
-			<Hero />
-			<CompactSkills />
-		</div>
+  <div class="stack gap-20 lg:gap-48">
+    <div class="wrapper stack gap-8 lg:gap-20">
+      <Hero />
+      <CompactSkills />
+    </div>
 
-		<main class="wrapper stack gap-20 lg:gap-48">
-			<section class="section with-background with-cta">
-				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Featured works</h3>
-					<p>Take a look below at some of my featured work for clients from the past few years.</p>
-				</header>
+    <main class="wrapper stack gap-20 lg:gap-48">
+      <section class="section with-background with-cta">
+        <header class="section-header stack gap-2 lg:gap-4">
+          <h3>Featured works</h3>
+          <p>
+            Take a look below at some of my featured work for clients from the
+            past few years.
+          </p>
+        </header>
 
-				<div class="gallery">
-					<YouTubeVideos videos={youtubeVideos} />
-					<Reels reels={reels} />
-				</div>
+        <div class="gallery">
+          <YouTubeVideos videos={youtubeVideos} />
+          <Reels reels={reels} />
+        </div>
 
-				<div class="cta">
-					<CallToAction href="/work/">
-						View All
-						<Icon icon="arrow-right" size="1.2em" />
-					</CallToAction>
-				</div>
-			</section>
-		</main>
+        <div class="cta">
+          <CallToAction href="/work/">
+            View All
+            <Icon icon="arrow-right" size="1.2em" />
+          </CallToAction>
+        </div>
+      </section>
+    </main>
 
-		<ContactCTA />
-	</div>
+    <ContactCTA />
+  </div>
 </BaseLayout>
 
 <style>
-	.section {
-		display: grid;
-		gap: 2rem;
-	}
+  /* Basic reset and global styles (adjust as needed for your project) */
+  body {
+    margin: 0;
+    font-family: sans-serif; /* Example font */
+    line-height: 1.6;
+  }
 
-	.with-background {
-		position: relative;
-	}
+  /* Assuming 'wrapper' is for limiting content width and centering */
+  .wrapper {
+    width: 100%;
+    max-width: 1200px; /* Example max-width */
+    margin: 0 auto;
+    padding: 0 1rem; /* Add some padding on the sides */
+  }
 
-	.with-background::before {
-		--hero-bg: var(--bg-image-subtle-2);
+  /* Assuming 'stack' is for vertical spacing */
+  .stack > * + * {
+    margin-top: 1rem; /* Default spacing between stacked elements */
+  }
 
-		content: '';
-		position: absolute;
-		pointer-events: none;
-		left: 50%;
-		width: 100vw;
-		aspect-ratio: calc(2.25 / var(--bg-scale));
-		top: 0;
-		transform: translateY(-75%) translateX(-50%);
-		background:
-			url('/assets/backgrounds/noise.png') top center/220px repeat,
-			var(--hero-bg) center center / var(--bg-gradient-size) no-repeat,
-			var(--gray-999);
-		background-blend-mode: overlay, normal, normal, normal;
-		mix-blend-mode: var(--bg-blend-mode);
-		z-index: -1;
-	}
+  /* Responsive adjustments for 'stack' */
+  .stack.gap-8 > * + * {
+    margin-top: 2rem; /* Increased spacing */
+  }
 
-	.with-background.bg-variant::before {
-		--hero-bg: var(--bg-image-subtle-1);
-	}
+  .stack.gap-20 > * + * {
+    margin-top: 5rem; /* Even more spacing */
+  }
 
-	.section-header {
-		justify-self: center;
-		text-align: center;
-		max-width: 50ch;
-		font-size: var(--text-md);
-		color: var(--gray-300);
-	}
+  @media (min-width: 50em) {
+    .stack.gap-20 > * + * {
+      margin-top: 12rem; /* Largest spacing on larger screens */
+    }
+    .stack.gap-8 > * + * {
+      margin-top: 2rem; /* Increased spacing */
+    }
+  }
 
-	.section-header h3 {
-		font-size: var(--text-2xl);
-	}
+  /* Mobile-first styles */
+  .section {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr; /* Stack elements on mobile */
+    grid-template-areas:
+      "header"
+      "gallery";
+  }
 
-	@media (min-width: 50em) {
-		.section {
-			grid-template-columns: repeat(4, 1fr);
-			grid-template-areas: 'header header header header' 'gallery gallery gallery gallery';
-			gap: 5rem;
-		}
+  .section.with-cta {
+    grid-template-areas:
+      "header"
+      "gallery"
+      "cta"; /* Stack CTA below gallery */
+  }
 
-		.section.with-cta {
-			grid-template-areas: 'header header header cta' 'gallery gallery gallery gallery';
-		}
+  .with-background {
+    position: relative;
+  }
 
-		.section-header {
-			grid-area: header;
-			font-size: var(--text-lg);
-		}
+  .with-background::before {
+    --hero-bg: var(--bg-image-subtle-2);
 
-		.section-header h3 {
-			font-size: var(--text-4xl);
-		}
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    left: 50%;
+    width: 100vw;
+    aspect-ratio: calc(2.25 / var(--bg-scale));
+    top: 0;
+    transform: translateY(-75%) translateX(-50%);
+    background:
+      url("/assets/backgrounds/noise.png") top center/220px repeat,
+      var(--hero-bg) center center / var(--bg-gradient-size) no-repeat,
+      var(--gray-999);
+    background-blend-mode: overlay, normal, normal, normal;
+    mix-blend-mode: var(--bg-blend-mode);
+    z-index: -1;
+  }
 
-		.with-cta .section-header {
-			justify-self: flex-start;
-			text-align: left;
-		}
+  .with-background.bg-variant::before {
+    --hero-bg: var(--bg-image-subtle-1);
+  }
 
-		.gallery {
-			grid-area: gallery;
-		}
+  .section-header {
+    justify-self: center;
+    text-align: center;
+    max-width: 50ch;
+    font-size: var(--text-md);
+    color: var(--gray-300);
+  }
 
-		.cta {
-			grid-area: cta;
-		}
-	}
+  .section-header h3 {
+    font-size: var(--text-2xl);
+  }
+
+  .gallery {
+    grid-area: gallery;
+  }
+
+  .cta {
+    grid-area: cta;
+  }
+
+  /* Desktop Styles */
+  @media (min-width: 50em) {
+    .section {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas: "header header header header" "gallery gallery gallery gallery";
+      gap: 5rem;
+    }
+
+    .section.with-cta {
+      grid-template-areas: "header header header cta" "gallery gallery gallery gallery";
+    }
+
+    .section-header {
+      grid-area: header;
+      font-size: var(--text-lg);
+    }
+
+    .section-header h3 {
+      font-size: var(--text-4xl);
+    }
+
+    .with-cta .section-header {
+      justify-self: flex-start;
+      text-align: left;
+    }
+  }
 </style>
