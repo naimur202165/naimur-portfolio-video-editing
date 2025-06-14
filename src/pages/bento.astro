@@ -1,9 +1,9 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
 import BentoGrid from '../components/bento/BentoGrid.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
 const bentoItems = [
-  {
+ {
     title: "Video Editor",
     description: "Professional video editor with expertise in Adobe Premiere Pro, After Effects, and DaVinci Resolve",
     icon: "video-editing",
@@ -11,11 +11,11 @@ const bentoItems = [
     gradient: "bg-gradient-to-br from-purple-500/10 to-pink-500/10 hover:from-purple-500/20 hover:to-pink-500/20"
   },
   {
-    title: "Music Artist",
-    description: "Independent music artist on Spotify with original compositions",
-    icon: "microphone-stage",
+    title: "WordPress Web Designer", // Updated from Music Artist
+    description: "Experienced WordPress web designer creating custom, responsive, and user-friendly websites.", // New description
+    icon: "laptop-code", // New icon, assuming a generic code/web design icon
     class: "col-span-1 row-span-1",
-    gradient: "bg-gradient-to-br from-blue-500/10 to-purple-500/10 hover:from-blue-500/20 hover:to-purple-500/20"
+    gradient: "bg-gradient-to-br from-indigo-500/10 to-teal-500/10 hover:from-indigo-500/20 hover:to-teal-500/20" // New gradient
   },
   {
     title: "Content Creator",
@@ -24,14 +24,33 @@ const bentoItems = [
     class: "col-span-1 row-span-1",
     gradient: "bg-gradient-to-br from-pink-500/10 to-rose-500/10 hover:from-pink-500/20 hover:to-rose-500/20"
   },
+  // --- Updated with actual YouTube videos from Naimur Academy ---
   {
-    title: "Latest Work",
-    description: "Leo Movie - Insider Leaks",
-    link: "https://www.youtube.com/watch?v=cftXsjqSvk4",
+    title: "Climbing Hills",
+    description: "A serene journey through picturesque landscapes, captured and edited to highlight the beauty of nature.",
+    link: "https://www.youtube.com/watch?v=1IxXKSK9zys",
     class: "col-span-1 row-span-1 md:col-span-2",
     type: "video",
     gradient: "bg-gradient-to-br from-amber-500/10 to-red-500/10 hover:from-amber-500/20 hover:to-red-500/20"
   },
+  // Added new reel "গভীর ঘুম"
+  {
+    title: "গভীর ঘুম (Deep Sleep)",
+    description: "A short, impactful reel showcasing a moment of profound calm.",
+    link: "https://www.youtube.com/watch?v=ENAPLwB8pK0",
+    class: "col-span-1 row-span-1", // This item will be a single column block
+    type: "video",
+    gradient: "bg-gradient-to-br from-purple-500/10 to-indigo-500/10 hover:from-purple-500/20 hover:to-indigo-500/20" // A new gradient for this reel
+  },
+  {
+    title: "Running competition",
+    description: "Dynamic footage capturing the excitement and energy of a local running competition, edited for impact.",
+    link: "https://www.youtube.com/watch?v=Wpiyxq-d6vw",
+    class: "col-span-1 row-span-1", // This item will be a single column block
+    type: "video",
+    gradient: "bg-gradient-to-br from-pink-500/10 to-rose-500/10 hover:from-pink-500/20 hover:to-rose-500/20"
+  },
+  // --- End of YouTube video additions ---
   {
     title: "Skills",
     items: ["Adobe Creative Suite", "DaVinci Resolve", "Shopify", "Motion Graphics", "Color Grading"],
@@ -49,6 +68,55 @@ const bentoItems = [
     gradient: "bg-gradient-to-br from-blue-500/10 to-cyan-500/10 hover:from-blue-500/20 hover:to-cyan-500/20"
   }
 ];
+
+
+// const bentoItems = [
+//   {
+//     title: "Video Editor",
+//     description: "Professional video editor with expertise in Adobe Premiere Pro, After Effects, and DaVinci Resolve",
+//     icon: "video-editing",
+//     class: "col-span-1 row-span-1 md:col-span-2",
+//     gradient: "bg-gradient-to-br from-purple-500/10 to-pink-500/10 hover:from-purple-500/20 hover:to-pink-500/20"
+//   },
+//   {
+//     title: "Music Artist",
+//     description: "Independent music artist on Spotify with original compositions",
+//     icon: "microphone-stage",
+//     class: "col-span-1 row-span-1",
+//     gradient: "bg-gradient-to-br from-blue-500/10 to-purple-500/10 hover:from-blue-500/20 hover:to-purple-500/20"
+//   },
+//   {
+//     title: "Content Creator",
+//     description: "YouTube content creator with focus on movie analysis and industry insights",
+//     icon: "youtube-logo",
+//     class: "col-span-1 row-span-1",
+//     gradient: "bg-gradient-to-br from-pink-500/10 to-rose-500/10 hover:from-pink-500/20 hover:to-rose-500/20"
+//   },
+//   {
+//     title: "Latest Work",
+//     description: "Leo Movie - Insider Leaks",
+//     link: "https://www.youtube.com/watch?v=cftXsjqSvk4",
+//     class: "col-span-1 row-span-1 md:col-span-2",
+//     type: "video",
+//     gradient: "bg-gradient-to-br from-amber-500/10 to-red-500/10 hover:from-amber-500/20 hover:to-red-500/20"
+//   },
+//   {
+//     title: "Skills",
+//     items: ["Adobe Creative Suite", "DaVinci Resolve", "Shopify", "Motion Graphics", "Color Grading"],
+//     class: "col-span-1 row-span-2",
+//     gradient: "bg-gradient-to-br from-green-500/10 to-emerald-500/10 hover:from-green-500/20 hover:to-emerald-500/20"
+//   },
+//   {
+//     title: "Experience",
+//     items: [
+//       "Sirpi Aesthetics - Content Creator & Video Editor (2024)",
+//       "The Photo Spot - Senior Video Editor & Creative Manager (2023)",
+//       "Film Shades Creation - Assistant Director & Art Designer (2022)"
+//     ],
+//     class: "col-span-1 md:col-span-2 row-span-1",
+//     gradient: "bg-gradient-to-br from-blue-500/10 to-cyan-500/10 hover:from-blue-500/20 hover:to-cyan-500/20"
+//   }
+// ];
 ---
 
 <BaseLayout title="Bento Portfolio | Ashwin R" description="Bento-style portfolio showcasing my work">

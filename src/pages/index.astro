@@ -1,55 +1,72 @@
 ---
-import { getCollection } from 'astro:content';
-import BaseLayout from '../layouts/BaseLayout.astro';
 import CallToAction from '../components/CallToAction.astro';
-import Grid from '../components/Grid.astro';
+import CompactSkills from '../components/CompactSkills.astro';
+import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
 import Icon from '../components/Icon.astro';
-import ContactCTA from '../components/ContactCTA.astro';
-import CompactSkills from '../components/CompactSkills.astro';
-import YouTubeVideos from '../components/YouTubeVideos.astro';
 import Reels from '../components/Reels.astro';
+import YouTubeVideos from '../components/YouTubeVideos.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
 const youtubeVideos = [
   {
-    title: "Leo Insider leaks - LetsFame App",
-    url: "https://www.youtube.com/watch?v=cftXsjqSvk4"
+    title: "২০২৫ সালের নতুন পাঠ্যবইয়ে যা যা থাকছে ",
+    url: "https://www.youtube.com/watch?v=o4mfDrTMtdY&t=124s"
   },
   {
-    title: "Jawan Trailer Reaction - LetsFame App",
-    url: "https://www.youtube.com/watch?v=tPeaVYRsU_I"
+    title: "অষ্টম শ্রেণির নতুন বই ২০২৫ ",
+    url: "https://www.youtube.com/watch?v=W_thAdulS70"
   },
   {
-    title: "Tom Collins - Short Film Teaser",
-    url: "https://www.youtube.com/watch?v=v7GFrJc_Fv4"
+    title: "৮ম শ্রেণির ষান্মাসিক মূল্যায়ন ইংরেজি প্রশ্ন উত্তর",
+    url: "https://www.youtube.com/watch?v=QzXmFsx7NcM"
   },
   {
-    title: "7D - Feature Film Promotion Video",
-    url: "https://youtu.be/L2Bk6l8ISjM"
+    title: "৯ম শ্রেণির অর্ধ বার্ষিক পরীক্ষার প্রশ্ন ২০২৪ ইংরেজি",
+    url: "https://www.youtube.com/watch?v=BROVXUx1-lI"
   }
 ];
+// const youtubeVideos = [
+//   {
+//     title: "২০২৫ সালের নতুন পাঠ্যবইয়ে যা যা থাকছে | ব্যাপক পরিবর্তন আসছে সকল শ্রেণির নতুন বইয়ে",
+//     url: "https://www.youtube.com/watch?v=cftXsjqSvk4"
+//   },
+//   {
+//     title: "Jawan Trailer Reaction - LetsFame App",
+//     url: "https://www.youtube.com/watch?v=tPeaVYRsU_I"
+//   },
+//   {
+//     title: "Tom Collins - Short Film Teaser",
+//     url: "https://www.youtube.com/watch?v=v7GFrJc_Fv4"
+//   },
+//   {
+//     title: "7D - Feature Film Promotion Video",
+//     url: "https://youtu.be/L2Bk6l8ISjM"
+//   }
+// ];
 
 const reels = [
   {
-    title: "Doctor Towels - Public Interview",
-    url: "https://youtube.com/shorts/bu_01s9m-kE",
-    thumbnail: "/assets/stock-2.jpg"
+    title: "Benefits of Digital Marketing",
+    url: "https://www.youtube.com/shorts/LiTSZEULLcA",
+    thumbnail: "/assets/naimur-digital-marketing-reels.png"
   },
   {
-    title: "Doctor Towels - Public Interview-2",
-    url: "https://youtube.com/shorts/idJmucSItKc",
+    title: "চ্যাট জিপিটি দিয়ে কি কি করা যায়",
+    url: "https://www.youtube.com/shorts/Omn40pF-nQg",
     thumbnail: "/assets/stock-4.jpg"
   },
   {
-    title: "Acne - Breakdowwn",
-    url: "https://youtube.com/shorts/4O4kfq_jwtg?feature=shared",
+    title: "গভীর ঘুম",
+    url: "https://www.youtube.com/shorts/ENAPLwB8pK0",
     thumbnail: "/assets/stock-3.jpg"
   },
   {
-    title: "Breast Implant - Essentials",
-    url: "https://www.youtube.com/shorts/7JsrfNlCBpg",
-    thumbnail: "/assets/stock-1.jpg"
-  }
+    title: "Benefits of Digital Marketing",
+    url: "https://www.youtube.com/shorts/LiTSZEULLcA",
+    thumbnail: "/assets/naimur-digital-marketing-reels.png"
+  },
+
 ];
 ---
 
