@@ -90,4 +90,21 @@ const otherWorks = [
 			font-size: var(--text-3xl);
 		}
 	}
+
+
+  .gallery {
+    /* Existing styles, if any */
+    display: grid; /* Use CSS Grid for flexible layout */
+    grid-template-columns: 1fr; /* On small screens, stack items */
+    gap: 1rem; /* Adjust gap as needed */
+}
+
+@media (min-width: 50em) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* Example: Two columns on larger screens */
+        gap: 2rem; /* Adjust gap for desktop */
+    }
+}
 </style>
+
+
