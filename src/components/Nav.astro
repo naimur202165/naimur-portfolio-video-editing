@@ -1,7 +1,7 @@
 ---
 import Icon from './Icon.astro';
 import ThemeToggle from './ThemeToggle.astro';
-import type { iconPaths } from './IconPaths';
+import type { IconName } from './icons/types';
 
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
@@ -11,8 +11,7 @@ const textLinks: { label: string; href: string }[] = [
 ];
 
 /** Icon links to social media */
-const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[] = [
-	// { label: 'GitHub', href: 'https://github.com/azerxafro', icon: 'github-logo' },
+const iconLinks: { label: string; href: string; icon: IconName }[] = [
 	{ label: 'LinkedIn', href: 'https://www.linkedin.com/in/naimur202164/', icon: 'linkedin-logo' },
 	{ label: 'Instagram', href: 'https://www.instagram.com/naimur202170', icon: 'instagram-logo' },
 	{ label: 'YouTube', href: 'https://www.youtube.com/channel/UCbSyXfoqXESlwnyhxXMCruw/about', icon: 'youtube-logo' },
@@ -109,7 +108,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 			</div>
 
 			<div class="action-buttons">
-				<a href="" download class="download-cv">
+				<a href="/assets/cv.pdf" download class="download-cv">
 					<Icon icon="paper-plane-tilt" size="1.2em" />
 					Download CV
 				</a>
@@ -183,27 +182,26 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 		text-decoration: none;
 	}
 
-.logo {
-  font-family: var(--font-brand);
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--accent-regular);
-  background: none; /* Remove background */
-  -webkit-background-clip: unset; /* Unset background-clip */
-  -webkit-text-fill-color: unset; /* Unset text-fill-color */
-  background-clip: unset; /* Unset background-clip */
-  line-height: 1;
-  width: 2.5em;
-  height: 2.5em;
-  transition: transform 0.2s ease;
-  border: none; /* Remove border if there is any */
-  box-shadow: none; /* Remove box shadow if there is any */
-}
+	.logo {
+		font-family: var(--font-brand);
+		font-size: 2rem;
+		font-weight: 700;
+		color: var(--accent-regular);
+		background: none;
+		-webkit-background-clip: unset;
+		-webkit-text-fill-color: unset;
+		background-clip: unset;
+		line-height: 1;
+		width: 2.5em;
+		height: 2.5em;
+		transition: transform 0.2s ease;
+		border: none;
+		box-shadow: none;
+	}
 
-.logo:hover {
-  transform: scale(1.1);
-}
-
+	.logo:hover {
+		transform: scale(1.1);
+	}
 
 	.logo:hover {
 		transform: scale(1.1);

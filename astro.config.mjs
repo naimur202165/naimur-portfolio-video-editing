@@ -1,12 +1,10 @@
 import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
-export default defineConfig({});
-export default {
-    vite: {
-      build: {
-        sourcemap: true,
-      },
+export default defineConfig({
+  vite: {
+    build: {
+      sourcemap: true,
     },
-  };
-  
+  },
+});
